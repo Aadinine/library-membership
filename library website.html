@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Membership Form</title>
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+            font-size: 50px;
+            border-style: outset;
+        }
+
+        h2 {
+            padding: 10px;
+            font-size: 40px;
+        }
+
+        form {
+            padding: 30px;
+        }
+
+        label {
+            font-size: 25px;
+            color: blue;
+        }
+
+        input, select {
+            width: 450px;
+            height: 30px;
+            margin-bottom: 15px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Library Membership Form Page -->
+    <div class="top">
+        <h1>Aadi's Books</h1>
+        <h2>Library Membership Form</h2>
+    </div>
+
+    <div class="form">
+        <form action="/serverlogic" method="post">
+            <fieldset>
+                <legend><strong>Member Details</strong></legend>
+
+                <label for="nam_">First Name:</label><br>
+                <input type="text" id="nam_" name="firstname" placeholder="Enter your name" required autofocus><br>
+
+                <label for="num_">Mobile Number:</label><br>
+                <input type="tel" id="num_" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" required><br>
+
+                <label for="ema_">Email:</label><br>
+                <input type="email" id="ema_" name="email" placeholder="example@mail.com" required><br>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Membership Plan</strong></legend>
+
+                <label>Choose Membership Duration:</label><br>
+                <input type="radio" id="onem" name="time" value="1m" required>
+                <label for="onem">1 month</label><br>
+
+                <input type="radio" id="threem" name="time" value="3m">
+                <label for="threem">3 months</label><br>
+
+                <input type="radio" id="sixm" name="time" value="6m">
+                <label for="sixm">6 months</label><br>
+
+                <input type="radio" id="oney" name="time" value="1y">
+                <label for="oney">1 year</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Book Selection</strong></legend>
+
+                <label for="boo_">Select a Book:</label><br>
+                <select name="books" id="boo_" required>
+                    <option value="">--Choose a book--</option>
+                    <option value="bk1">Think and Grow Rich - by Napoleon Hill</option>
+                    <option value="bk2">The Epic Life of Christopher Kumar - by Ruskin Bond</option>
+                    <option value="bk3">The Psychology of Money - by Morgan Housel</option>
+                    <option value="bk4">Robert and the Dog - by Mohanlal</option>
+                </select>
+            </fieldset>
+
+            <br>
+            <input type="subm
